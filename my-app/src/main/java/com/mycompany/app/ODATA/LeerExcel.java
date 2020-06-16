@@ -1,4 +1,4 @@
-package com.mycompany.app.Modelo;
+package com.mycompany.app.ODATA;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -13,9 +13,12 @@ import java.util.List;
 
 public class LeerExcel {
 
+
+
     public LeerExcel(File filename){
-        System.out.println("Hola");
+
         List cellData = new ArrayList<>();
+
         try{
             FileInputStream fileInputStream = new FileInputStream(filename);
             XSSFWorkbook workbook = new XSSFWorkbook(fileInputStream);
@@ -32,6 +35,7 @@ public class LeerExcel {
                     cellTemp.add(hssfCell);
                 }
                 cellData.add(cellTemp);
+                System.out.print(cellTemp);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -40,7 +44,6 @@ public class LeerExcel {
     }
 
     private void Obtener(List cellDataList){
-        System.out.println("Hola");
         for (int i=0; i<cellDataList.size(); i++){
             List cellTempList = (List)cellDataList.get(i);
             for (int j=0; j<cellTempList.size(); j++){
