@@ -14,11 +14,11 @@ import java.util.List;
 
 public class PGMateriaDAO implements MateriaDAO {
 
-    final String INSERT = "INSERT INTO materia VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-    final String UPDATE = "UPDATE materia SET clv_materia = ?, nombre_materia = ?, creditos = ?, cuatrimestre = ?, posicion = ?, clv_plan = ?, horas_x-semana = ?, tipo_mateira = ? WHERE clv_materia = ?";
-    final String DELETE = "DELETE FROM materia WHERE clv_materia = ?";
-    final String ALL = "SELECT * FROM materia";
-    final String BUSCAR = "SELECT * FROM materia WHERE clv_materia = ?";
+    final String INSERT = "INSERT INTO materias VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    final String UPDATE = "UPDATE materias SET clv_materia = ?, nombre_materia = ?, creditos = ?, cuatrimestre = ?, posicion = ?, clv_plan = ?, horas_x-semana = ?, tipo_mateira = ? WHERE clv_materia = ?";
+    final String DELETE = "DELETE FROM materias WHERE clv_materia = ?";
+    final String ALL = "SELECT * FROM materias";
+    final String BUSCAR = "SELECT * FROM materias WHERE clv_materia = ?";
 
     private Connection con;
 

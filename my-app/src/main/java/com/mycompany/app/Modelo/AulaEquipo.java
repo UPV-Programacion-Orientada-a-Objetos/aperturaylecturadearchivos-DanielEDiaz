@@ -2,7 +2,7 @@ package com.mycompany.app.Modelo;
 
 public class AulaEquipo {
 
-    public class PKAulaE{
+    public static class PKAulaE{
         private int id_equipo;
         private String id_aula;
 
@@ -34,6 +34,10 @@ public class AulaEquipo {
     public AulaEquipo(PKAulaE pkAulaE, int cantidad) {
         this.pkAulaE = pkAulaE;
         this.cantidad = cantidad;
+    }
+
+    public AulaEquipo() {
+
     }
 
     public PKAulaE getPkAulaE() {

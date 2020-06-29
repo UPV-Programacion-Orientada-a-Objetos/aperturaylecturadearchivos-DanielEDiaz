@@ -158,7 +158,7 @@ public class PGCategoriasEquipoDAO implements CategoriasEquipoDAO {
         return p;
     }
 
-    public static void main(String[] args){
+    public static void main2(String[] args){
         Connection con = null;
         try{
             con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/ProyectoHorarios", "postgres","1234");

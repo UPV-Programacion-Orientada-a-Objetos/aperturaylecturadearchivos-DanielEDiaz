@@ -2,7 +2,11 @@ package com.mycompany.app.Modelo;
 
 public class UsoAulaGrupo {
 
-    public class PKUag{
+    public UsoAulaGrupo() {
+
+    }
+
+    public static class PKUag{
         private int dia;
         private int espacio_tiempo;
         private String id_aula;

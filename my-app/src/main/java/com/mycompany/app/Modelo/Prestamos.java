@@ -2,7 +2,7 @@ package com.mycompany.app.Modelo;
 
 public class Prestamos {
 
-    public class PKPres{
+    public static class PKPres{
         private String clv_usuario;
         private int idcarrera;
 

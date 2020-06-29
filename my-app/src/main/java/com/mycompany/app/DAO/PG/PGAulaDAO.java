@@ -34,7 +34,9 @@ public class PGAulaDAO implements AulaDAO {
             ps.setString(1, p.getId_aula());
             ps.setString(2, p.getNombre());
             ps.setString(3, p.getTipo());
-               ps.setInt(4, p.getCapacidad());
+            ps.setInt(4, p.getCapacidad());
+            ps.setString(5, p.getDescripcion());
+            ps.setString(6, p.getDescripcion());
             if(ps.executeUpdate()== 0){
                 throw new DAOException("Es posible que los datos no hayan sido guardaos.");
             }

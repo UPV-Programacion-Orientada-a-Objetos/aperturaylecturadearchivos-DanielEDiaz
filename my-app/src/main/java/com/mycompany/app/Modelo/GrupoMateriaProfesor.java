@@ -2,7 +2,11 @@ package com.mycompany.app.Modelo;
 
 public class GrupoMateriaProfesor {
 
-    public class PKGMP{
+    public GrupoMateriaProfesor() {
+
+    }
+
+    public static class PKGMP{
         private String clv_grupo;
         private String clv_materia;
         private String clv_usuario;

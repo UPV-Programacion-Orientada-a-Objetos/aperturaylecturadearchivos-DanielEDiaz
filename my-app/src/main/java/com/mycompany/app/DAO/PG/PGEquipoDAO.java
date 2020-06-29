@@ -105,7 +105,7 @@ public class PGEquipoDAO implements EquipoDAO {
         int id_cat = rs.getInt("id_categoria");
         String nombre = rs.getString("nombre");
         String desc = rs.getString("descripcion");
-        Equipo a = new Equipo(id, id_cat, nombre, desc);
+        Equipo a = new Equipo(id, nombre, desc, id_cat);
         return  a;
 
     }

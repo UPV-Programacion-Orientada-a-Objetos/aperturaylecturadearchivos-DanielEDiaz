@@ -2,7 +2,7 @@ package com.mycompany.app.Modelo;
 
 public class MateriaUsuario {
 
-    public class PKMatU{
+    public static class PKMatU{
         private String clv_materia;
         private String clv_plan;
         private String clv_usuario;
@@ -46,6 +46,9 @@ public class MateriaUsuario {
         this.pkMatU = pkMatU;
         this.puntos_confianza = puntos_confianza;
         this.puntos_director = puntos_director;
+    }
+
+    public MateriaUsuario() {
     }
 
     public PKMatU getPkMatU() {

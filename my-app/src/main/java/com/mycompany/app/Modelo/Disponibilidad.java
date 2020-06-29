@@ -2,7 +2,11 @@ package com.mycompany.app.Modelo;
 
 public class Disponibilidad {
 
-    public class PKDis{
+    public Disponibilidad() {
+
+    }
+
+    public static class PKDis{
         private  int dia;
         private int espacio_tiempo;
         private String clv_usuario;
@@ -37,6 +41,7 @@ public class Disponibilidad {
             this.clv_usuario = clv_usuario;
         }
     }
+
     private PKDis id;
     public Disponibilidad(PKDis id){
         this.id = id;

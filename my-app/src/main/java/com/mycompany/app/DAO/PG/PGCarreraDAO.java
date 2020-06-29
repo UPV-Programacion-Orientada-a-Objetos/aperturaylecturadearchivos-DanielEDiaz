@@ -2,11 +2,8 @@ package com.mycompany.app.DAO.PG;
 
 import com.mycompany.app.DAO.CarreraDAO;
 import com.mycompany.app.DAO.DAOException;
-import com.mycompany.app.Modelo.Aula;
 import com.mycompany.app.Modelo.Carrera;
-import com.mycompany.app.Modelo.Profesor;
 
-import javax.swing.text.Caret;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

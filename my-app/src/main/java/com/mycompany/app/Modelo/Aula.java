@@ -18,13 +18,6 @@ public class Aula {
         this.ubicacion = ubicacion;
     }
 
-    public Aula(String id_aula, String nombre, String tipo, int capacidad) {
-        this.id_aula = id_aula;
-        this.nombre = nombre;
-        this.tipo = tipo;
-        this.capacidad = capacidad;
-    }
-
     public String getId_aula() {
         return id_aula;
     }

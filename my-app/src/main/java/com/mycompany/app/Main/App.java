@@ -1,27 +1,16 @@
 package com.mycompany.app.Main;
 
-import com.mycompany.app.ODATA.JSONData;
+import com.mycompany.app.DAO.DAOException;
+import com.mycompany.app.Cargar.Start;
 
-import java.io.File;
+import java.io.FileNotFoundException;
+import java.nio.file.FileSystemException;
 
-public class App 
-{
-    public static void main_2( String[] args )
-    {
-        Start();
+public class App extends Start {
+
+    public static void main( String[] args ) throws FileSystemException, FileNotFoundException {
+        cargar();
     }
 
-    private static void Start (){
-        final File Excel = new File("src/main/Resources/Libro1.xlsx");
-        final File Json = new File("src/main/Resources/Datos.json");
-        JSONData j = new JSONData();
-
-        //if(Json.exists() || Excel.exists()){
-            j.LeerJson(Json);
-            //LeerExcelv3 l = new LeerExcelv3(f);
-        //}
-
-
-    }
 }
 

@@ -16,8 +16,6 @@ import java.util.List;
 
 public class LeerExcelv3 {
 
-    private ArrayList<Profesor> AProf = new ArrayList<>();
-
     public LeerExcelv3(File excel) {
         try {
             FileInputStream fis = new FileInputStream(excel);
@@ -31,10 +29,10 @@ public class LeerExcelv3 {
 
     }
 
-    public void EscogerHoja(XSSFWorkbook wb){
+    public void EscogerHoja(XSSFWorkbook wb) {
 
-        for (int i=0; i<wb.getNumberOfSheets(); i++){
-            if(wb.getSheetName(i).equals("Profesores")){
+        for (int i = 0; i < wb.getNumberOfSheets(); i++) {
+            if (wb.getSheetName(i).equals("Profesores")) {
                 List list = new ArrayList();
                 LeerExcel(i, list, wb);
                 System.out.println(list);
@@ -42,21 +40,33 @@ public class LeerExcelv3 {
         }
     }
 
-    public List LeerExcel(int n, List cellTemp, XSSFWorkbook wb){
+    public /*List*/ void LeerExcel(int n, List cellTemp, XSSFWorkbook wb) {
         XSSFSheet sheet = wb.getSheetAt(n);
         Iterator rowIterator = sheet.rowIterator();
 
         while (rowIterator.hasNext()) {
             XSSFRow row = (XSSFRow) rowIterator.next();
             Iterator iterator = row.cellIterator();
-            while (iterator.hasNext()){
-                XSSFCell cell = (XSSFCell)iterator.next();
+            while (iterator.hasNext()) {
+                XSSFCell cell = (XSSFCell) iterator.next();
                 cellTemp.add(cell);
             }
         }
-        return cellTemp;
+        Obtener(cellTemp);
+        //return cellTemp;
     }
 
+    private void Obtener(List cellDataList) {
+        for (int i = 0; i < cellDataList.size(); i++) {
+            List cellTempList = (List) cellDataList.get(i);
+            for (int j = 0; j < cellTempList.size(); j++) {
+                XSSFCell hssfCell = (XSSFCell) cellTempList.get(j);
+                String stringCellValue = hssfCell.toString();
+                System.out.println(stringCellValue + " ");
+            }
+            System.out.println();
+        }
+    }
     /*System.out.println(list);
       int k=0;
       System.out.println(list.size());
@@ -70,4 +80,5 @@ public class LeerExcelv3 {
                   )
              );
       k++;*/
+
 }

@@ -7,7 +7,7 @@ public class Equipo {
     private String descripcion;
     private int id_categoria;
 
-    public Equipo(int id, int id_categoria, String nombre, String descripcion) {
+    public Equipo(int id, String nombre, String descripcion, int id_categoria) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;

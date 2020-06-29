@@ -1,9 +1,7 @@
 package com.mycompany.app.DAO.PG;
 
 import com.mycompany.app.DAO.*;
-import com.mycompany.app.Modelo.Categoria;
 import com.mycompany.app.Modelo.CategoriasEquipo;
-import com.mycompany.app.Modelo.Equipo;
 
 import java.sql.*;
 import java.util.List;
